@@ -158,7 +158,7 @@ const animate = () => {
 	
 	if (intersects.length > 0) {
 		const object = intersects[0].object;
-		if (object.name === 'earth') {
+		if (object.name === 'earth' || object.name === 'moon') {
 			// earth.material.color.set(0xffff00);
 			earth.rotation.y -= 0.02;
 			earthGroup.rotation.y += 0.01;
