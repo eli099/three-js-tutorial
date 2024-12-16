@@ -3,6 +3,11 @@ import * as THREE from 'three';
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
+if (window.innerWidth < 768) {
+	camera.fov = 102;
+	camera.updateProjectionMatrix();
+}
+
 const renderer = new THREE.WebGLRenderer();
 
 // change background color
@@ -31,6 +36,12 @@ animate();
 window.addEventListener('resize', () => {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	camera.aspect = window.innerWidth / window.innerHeight;
+	
+	if (window.innerWidth < 768) {
+		camera.fov = 102;
+	} else {
+		camera.fov = 75;
+	}
 
 	camera.updateProjectionMatrix();
 });

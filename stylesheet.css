@@ -86,6 +86,30 @@ ul, li, p {
 	line-height: 1.4em;
 }
 
+@media (max-width: 767px) {
+	ul, li, p {
+		font-size: 14pt;
+	}
+	ul {
+		padding-left: 1em;
+	}
+	.content-wrapper {
+		padding: 64px 12px;
+	}
+	.content {
+		padding: 12px;
+	}
+	.nav-button {
+		font-size: 1.25rem;
+		bottom: 12px;
+	}
+	h1 {
+		font-size: 1.5rem;
+		top: 12px;
+		left: 12px;
+	}
+}
+
 li {
 	text-wrap: pretty;
 	margin-bottom: 1em;
